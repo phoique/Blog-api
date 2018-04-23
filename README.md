@@ -1,2 +1,2 @@
 # Blog-api
-Nodejs Blog Api
+Nodejs Blog api
