@@ -14,8 +14,8 @@ postRooter.get('/', (req, res, next) => {
     })
 });
 
-// post id
 
+// post id
 postRooter.get('/:post_id', (req,res,next) => {
     const promise = Post.findById(req.params.post_id);
     promise.then((post) => {
@@ -26,6 +26,19 @@ postRooter.get('/:post_id', (req,res,next) => {
         res.json(err)
     });
 });
+
+/*Post category list
+postRooter.get('/:category', (req,res,next) => {
+    const promise = Post.find();
+    promise.then((posts) => {
+        if(!post)
+            next({message: 'The post was not found.'});
+        res.json(posts);
+    }).catch((err) => {
+        res.json(err);
+    })
+});
+*/
 
 // Post create
 postRooter.post('/', (req,res, next) => {
