@@ -1,6 +1,7 @@
 const express = require('express');
 const userRouter = express.Router();
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 // User models
 const User = require('../models/User');
@@ -73,15 +74,24 @@ userRouter.get('/:user_id', (req, res, next) => {
 
 // User create
 userRouter.post('/', (req, res, next) => {
-    const user = new User(req.body);
-    const promise = user.save();
+	const { username, password, eMail, name, surname } = req.body;
 
-    promise.then((userData) => {
-        res.json(userData); 
-    }).catch((err) => {
-        res.json(err);
-    })
+	bcrypt.hash(password, 10).then((hash) => {
+		const user = new User({
+			username,
+			password: hash,
+			eMail, 
+			name, 
+			surname
+		});
 
+		const promise = user.save();
+		promise.then((userData) => {
+			res.json(userData)
+		}).catch((err) => {
+			res.json(err);
+		});
+	});
 });
 
 // User update

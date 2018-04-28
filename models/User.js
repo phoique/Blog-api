@@ -12,8 +12,6 @@ const userSchema = new Schema({
     password: {
         type: String,
         required: [true, '`{PATH}` alanı zorunludur.'],
-        maxlength: [30, '`{PATH}` alanı (`{VALUE}`), ({MAXLENGTH}) karakterden küçük olmalıdır '],
-        minlength: [8, '`{PATH}` alanı (`{VALUE}`), ({MINLENGTH}) karakterden büyük olmalıdır.'],
     },
     eMail: {
         type: String,

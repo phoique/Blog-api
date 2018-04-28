@@ -13,6 +13,13 @@ const db = require('./helper/db')();
 
 const app = express();
 
+// Config
+const config = require('./config');
+app.set('secret_key', config.api_secret_key);
+
+// Middleware
+const verifyToken = require('./middleware/verify-token');
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
@@ -24,7 +31,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-//app.use('/api'); middleware
+app.use('/api', verifyToken);
 app.use('/api/post',postRouter);
 app.use('/api/user/',userRouter);
 
