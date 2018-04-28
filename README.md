@@ -8,31 +8,31 @@ http://localhost:3000 <br>
 
 # Posts
 
-| Route | HTTP Verb	|
-| --- | --- | --- | --- |
-| /api/post | `GET` |
-| /api/post | `POST` |
-| /api/post/:post_id | `GET` | 
+| Route |  HTTP Verb |
+| --- | --- |
+| /api/post/ | `GET` |
+| /api/post/ | `POST` |
+| /api/post/:post_id | `GET` |
 | /api/post/:post_id | `PUT` |
-| /api/post/:post_id | `DELETE`|
-|
+| /api/post/:post_id | `DELETE` |
+
 
 # Users
 
-| Route | HTTP Verb	
-| --- | --- | --- | --- |
-| /api/user | `GET` 
-| /api/user | `POST`
+| Route |  HTTP Verb |
+| --- | --- |
+| /api/user/ | `GET` |
+| /api/user/ | `POST` |
 | /api/user/:user_id | `GET` |
 | /api/user/:user_id | `PUT` |
 | /api/user/:user_id | `DELETE` |
-|
+
 # Index
 
-| Route | HTTP Verb		 | Description	 |
-| --- | --- | --- | --- |
+| Route |  HTTP Verb | Description |
+| --- | --- | --- |
 | / | `GET` | Homepage |
-| /api/login | `POST` | User login and generate a token. |
-|
+| /api/login/ | `POST` | User login and generate a token. |
+
 
 
