@@ -1,10 +1,10 @@
 # Node Blog Api
 İnstall, <br>
-Creating MongoDB "blogApi" database <br>
-you can edit database information: `(helper/db.js)`<br>
-npm install <br>
-npm run start:dev <br>
-http://localhost:3000 <br>
+`+` Creating MongoDB "blogApi" database <br>
+`+` you can edit database information: `(helper/db.js)`<br>
+`+` npm install <br>
+`+` npm run start:dev <br>
+`+` http://localhost:3000 <br>
 `happy ending :).`
 
 
